@@ -14,4 +14,8 @@ array.insert(0, 0)
 
 array.reverse()
 
+for i in range(len(array)):
+    print(array[i])
+
 print(array)
+print(array[0])
