@@ -1,5 +1,5 @@
 # # Solution 1
-# # O(n) Time | O(1) Space
+# # O(n) Time | O(n) Space
 # def kadanesAlgorithm(array):
 #     sumsArray = [0 for x in range(len(array))]
 #     sumsArray[0] = array[0]
