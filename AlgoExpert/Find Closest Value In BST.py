@@ -8,7 +8,7 @@ class BST:
 # Solution 1 - Recursion
 # Average: O(log(n)) Time | O(log(n)) Space
 # Worst: O(n) Time | O(n) Space
-# def findClosestValueInBst(tree, target):
+def findClosestValueInBst(tree, target):
 	closestNode = []
 	
 	def walkingThrough(node: BST):
@@ -41,9 +41,10 @@ class BST:
 # # Solution 2 - Recursion
 # # Average: O(log(n)) Time | O(log(n)) Space
 # # Worst: O(n) Time | O(n) Space
-# def findClosestValueInBst(tree, target):
-#     return findClosestValueInBstHelper(tree, target, tree.value)
-# def findClosestValueInBstHelper(node, target, closestValue):
+def findClosestValueInBst(tree, target):
+    return findClosestValueInBstHelper(tree, target, tree.value)
+
+def findClosestValueInBstHelper(node, target, closestValue):
 	if node is None:
 		return closestValue
 	
