@@ -14,27 +14,27 @@
 #                     resultArray.append(subResultArray)
 #     return resultArray
 
-# # Use left, right pointers
-# # O(n^2)
-# def threeNumberSum(array, targetSum):
-#     resultArray = []
-#     array.sort()
-#     leftIndx = 0
-#     rightIndx = 0
-#     for currentIndx in range(0, len(array) - 1):
-#         leftIndx = currentIndx + 1
-#         rightIndx = len(array) - 1
-#         while leftIndx < rightIndx:
-#             currentSum = array[currentIndx] + array[leftIndx] + array[rightIndx]
-#             if currentSum == targetSum:
-#                 resultArray.append([array[currentIndx], array[leftIndx], array[rightIndx]])
-#                 leftIndx += 1
-#                 rightIndx -= 1
-#             elif currentSum > targetSum:
-#                 rightIndx -= 1
-#             else:
-#                 leftIndx += 1
-#     return resultArray
+# Use left, right pointers
+# O(n^2)
+def threeNumberSum(array, targetSum):
+    resultArray = []
+    array.sort()
+    leftIndx = 0
+    rightIndx = 0
+    for currentIndx in range(0, len(array) - 1):
+        leftIndx = currentIndx + 1
+        rightIndx = len(array) - 1
+        while leftIndx < rightIndx:
+            currentSum = array[currentIndx] + array[leftIndx] + array[rightIndx]
+            if currentSum == targetSum:
+                resultArray.append([array[currentIndx], array[leftIndx], array[rightIndx]])
+                leftIndx += 1
+                rightIndx -= 1
+            elif currentSum > targetSum:
+                rightIndx -= 1
+            else:
+                leftIndx += 1
+    return resultArray
 
 
 array = [12, 3, 1, 2, -6, 5, -8, 6]
