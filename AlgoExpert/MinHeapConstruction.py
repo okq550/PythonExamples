@@ -9,7 +9,7 @@ class MinHeap:
 	def buildHeap(self, array):
 		# Using Sift down method.
 		# Get the first parent Idx
-		#Loop backwards to the root, and siftDown the whole thing.
+		# Loop backwards to the root, and siftDown the whole thing.
 		firstParentIdx = (len(array) - 2) // 2 
 		for currentIdx in reversed(range(firstParentIdx + 1)):
 			self.siftDown(currentIdx, len(array) - 1, array)
@@ -41,7 +41,7 @@ class MinHeap:
 
 	def siftUp(self, currentIdx, heap):
 		# Get the parent of current node.
-		# While we did not pass the root of the heap and the current node value is greater than its parent,
+		# While we did not pass the root of the heap and the current node value is less than its parent,
 		# Swap the current with the parent, 
 		# The current now was the parent, Get it's parent again and continue till we reach the root.
 		parentIdx = (currentIdx - 1) // 2
