@@ -9,13 +9,14 @@ class Node:
         return self
 
     def breadthFirstSearch(self, array):
-	    queue = [self]
-	    while len(queue) > 0:
-		    currentNode = queue.pop(0)
-		    array.append(currentNode.name)
-		    for child in currentNode.children:
-			    queue.append(child)
-	    return array
+        queue = [self]
+        while len(queue) > 0:
+            currentNode = queue.pop(0)
+            array.append(currentNode.name)
+            for child in currentNode.children:
+                queue.append(child)
+        return array
+
 
 graph = Node("A")
 graph.addChild("B").addChild("C").addChild("D")
