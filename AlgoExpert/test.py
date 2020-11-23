@@ -1,12 +1,16 @@
-array = [0]
-i = 0
-length = len(array)
-while i < length:
-    if array[i] != 4:
-        array.append(i + 1)
-        i += 1
-        length = len(array)
-    else:
-        break
-        
-print(array)
+# 
+# 
+
+# return "etyB yliaD ehT”
+
+string = "The Daily Byte"
+words = string.split(' ')
+output = ''
+words.reverse()
+
+for word in words:
+    for letter in word[::-1]:
+        output += letter
+    output += ' '
+
+print(output)
